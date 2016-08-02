@@ -1,0 +1,12 @@
+c:\users\ahmet\documents\visual studio 2015\Projects\TestOluşturmaProgramı\TestOluşturmaProgramı\bin\Debug\TestOluşturmaProgramı.exe.config
+C:\Users\Ahmet\documents\visual studio 2015\Projects\TestOluşturmaProgramı\TestOluşturmaProgramı\bin\Debug\TestOluşturmaProgramı.exe
+C:\Users\Ahmet\documents\visual studio 2015\Projects\TestOluşturmaProgramı\TestOluşturmaProgramı\bin\Debug\TestOluşturmaProgramı.pdb
+C:\Users\Ahmet\documents\visual studio 2015\Projects\TestOluşturmaProgramı\TestOluşturmaProgramı\bin\Debug\AdoNetHelper.dll
+C:\Users\Ahmet\documents\visual studio 2015\Projects\TestOluşturmaProgramı\TestOluşturmaProgramı\obj\Debug\TestOluşturmaProgramı.csprojResolveAssemblyReference.cache
+C:\Users\Ahmet\documents\visual studio 2015\Projects\TestOluşturmaProgramı\TestOluşturmaProgramı\obj\Debug\TestOluşturmaProgramı.Form1.resources
+C:\Users\Ahmet\documents\visual studio 2015\Projects\TestOluşturmaProgramı\TestOluşturmaProgramı\obj\Debug\TestOluşturmaProgramı.Properties.Resources.resources
+C:\Users\Ahmet\documents\visual studio 2015\Projects\TestOluşturmaProgramı\TestOluşturmaProgramı\obj\Debug\TestOluşturmaProgramı.TestForm.resources
+C:\Users\Ahmet\documents\visual studio 2015\Projects\TestOluşturmaProgramı\TestOluşturmaProgramı\obj\Debug\TestOluşturmaProgramı.csproj.GenerateResource.Cache
+C:\Users\Ahmet\documents\visual studio 2015\Projects\TestOluşturmaProgramı\TestOluşturmaProgramı\obj\Debug\TestOluşturmaProgramı.exe
+C:\Users\Ahmet\documents\visual studio 2015\Projects\TestOluşturmaProgramı\TestOluşturmaProgramı\obj\Debug\TestOluşturmaProgramı.pdb
+C:\Users\Ahmet\documents\visual studio 2015\Projects\TestOluşturmaProgramı\TestOluşturmaProgramı\obj\Debug\TestOluşturmaProgramı.SoruEkleDuzenle.resources
