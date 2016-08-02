@@ -19,7 +19,7 @@ namespace TestOluşturmaProgramı
         }
         string ConnectionString = "Server=.;Database=TestOlusturma;Integrated Security=true";
 
-        public int index;
+        public int index,sorusayisi;
         private void lstTestSorular_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lstTestSorular.SelectedIndex > -1)
@@ -36,18 +36,25 @@ namespace TestOluşturmaProgramı
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            AdoNetHelper.Database ado = new AdoNetHelper.Database(ConnectionString);
-            string query = "Insert into Soru Values(@text,@ans1,@ans2,@ans3,@ans4,@corrans,@testID)";
-            List<SqlParameter> lst = new List<SqlParameter>();
-            lst.Add(new SqlParameter("@text", txtSoru.Text));
-            lst.Add(new SqlParameter("@ans1", txtA.Text));
-            lst.Add(new SqlParameter("@ans2", txtB.Text));
-            lst.Add(new SqlParameter("@ans3", txtC.Text));
-            lst.Add(new SqlParameter("@ans4", txtD.Text));
-            lst.Add(new SqlParameter("@corrans",cmbDogru.SelectedItem.ToString()));
-            lst.Add(new SqlParameter("testID", index));
-            ado.RunQuery(query, lst);
-            SorulariGoster();
+            if (lstTestSorular.Items.Count < sorusayisi)
+            {
+                AdoNetHelper.Database ado = new AdoNetHelper.Database(ConnectionString);
+                string query = "Insert into Soru Values(@text,@ans1,@ans2,@ans3,@ans4,@corrans,@testID)";
+                List<SqlParameter> lst = new List<SqlParameter>();
+                lst.Add(new SqlParameter("@text", txtSoru.Text));
+                lst.Add(new SqlParameter("@ans1", txtA.Text));
+                lst.Add(new SqlParameter("@ans2", txtB.Text));
+                lst.Add(new SqlParameter("@ans3", txtC.Text));
+                lst.Add(new SqlParameter("@ans4", txtD.Text));
+                lst.Add(new SqlParameter("@corrans", cmbDogru.SelectedItem.ToString()));
+                lst.Add(new SqlParameter("testID", index));
+                ado.RunQuery(query, lst);
+                SorulariGoster();
+            }
+            else
+            {
+                MessageBox.Show("Test Için Belirlenen Soru Sayısı Tamamlanmıştır!!!");
+            }
         }
 
         private void SorulariGoster()
@@ -86,11 +93,15 @@ namespace TestOluşturmaProgramı
                 ado.RunQuery(query, lst);
                 SorulariGoster();
             }
+            else
+            {
+                MessageBox.Show("Lütfen Bir Soru Seçiniz!!!");
+            }
         }
 
         private void btnDuzenle_Click(object sender, EventArgs e)
         {
-            if (lstTestSorular.SelectedIndex > -1)
+            if (lstTestSorular.SelectedIndex > -1 )
             {
                 AdoNetHelper.Database ado = new AdoNetHelper.Database(ConnectionString);
                 Soru soru = lstTestSorular.SelectedItem as Soru;
@@ -106,6 +117,10 @@ namespace TestOluşturmaProgramı
                 lst.Add(new SqlParameter("@id", soru.SoruId));
                 ado.RunQuery(query, lst);
                 SorulariGoster();
+            }
+            else
+            {
+                MessageBox.Show("Lütfen Bir Soru Seçiniz!!!");
             }
         }
     }

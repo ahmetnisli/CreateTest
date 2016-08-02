@@ -117,6 +117,7 @@ namespace TestOluşturmaProgramı
                 Test test = cmbTest.SelectedItem as Test;
                 soruform.lblTestAdi.Text = test.Name;
                 soruform.index = test.Id;
+                soruform.sorusayisi = test.QuestionQuantity;
                 AdoNetHelper.Database ado = new AdoNetHelper.Database(ConnectionString);
                 string query = "Select * from Soru where TestID=@test";
                 List<SqlParameter> lst = new List<SqlParameter>();
@@ -137,6 +138,10 @@ namespace TestOluşturmaProgramı
 
                 }
                 soruform.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Lütfen Bir Test Seçiniz !!!");
             }
             TestSorulariniGetir();
         }
