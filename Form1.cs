@@ -82,7 +82,7 @@ namespace TestOluşturmaProgramı
             if (lstSorular.SelectedIndex > -1)
             {
                 Soru soru = lstSorular.SelectedItem as Soru;
-                lblSoru.Text = soru.Text;
+                lblSoru.Text = lstSorular.SelectedIndex+1+".Soru : " + soru.Text;
                 lblAnswerA.Text = soru.AnswerA;
                 lblAnswerB.Text = soru.AnswerB;
                 lblAnswerC.Text = soru.AnswerC;
